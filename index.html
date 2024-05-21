@@ -5,82 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Yeu</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXX-X');
+    </script>
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-me">More About Me</a></li>
-            <li><a href="#links">Links</a></li>
-            <li><a href="#hobbies">Hobbies and Interests</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#latest-projects">Latest Projects</a></li>
-            <li><a href="#work-together">Let's Work Together</a></li>
-            <li><a href="#stay-connected">Stay Connected</a></li>
-        </ul>
+    <div class="sidebar collapsed">
+        <div class="profile">
+            <img src="images/profile-picture.jpg" alt="Profile Picture" loading="lazy">
+            <h3>Chris Yeu</h3>
+            <p>Computer Science Student</p>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
         <label class="theme-switch" for="theme-toggle">
             <input type="checkbox" id="theme-toggle" onclick="toggleTheme()" />
             <span class="slider round"></span>
         </label>
     </div>
 
-    <div class="container">
-        <div class="content" id="home">
-            <h1>Welcome to Chris Yeu's Command Center!</h1>
-            <p>Hello! My name is Chris Yeu, and I am a Computer Science student at Texas Southern University.</p>
-            <p>Always exploring software development and technological innovation for greater profit and efficiency.</p>
-            <p><del>Throughout my studies, I have gained proficiency in various programming languages and development tools,
-                and I have acquired practical experience through numerous projects and internships. These experiences have
-                honed my problem-solving skills and highlighted the importance of teamwork.</del></p>
-            <p>Suffering never ends..........</p>
-            <p>My goal is to <del>develop creative and practical software solutions that positively impact society. I am
-                dedicated to continuous learning and personal growth.</del> survive from this suffering.</p>
-            <p>No matter how endless suffering it seems like... I would like you to know that you are never alone! Let's endure this suffering together and overcome together!!</p>
-            <button onclick="getInTouch()">Get in Touch</button>
-        </div>
-
-        <div class="content" id="about-me">
-            <h2>More About Me</h2>
-            <p>Computer Science - Texas Southern University GPA 3.22</p>
-        </div>
-
-        <div class="content" id="links">
-            <h2>Links</h2>
-            <p>Include links to your social media profiles, personal blog, or any other relevant links.</p>
-            <ul>
-                <li><a href="https://github.com/chrisyeu11" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/chrisyeu11" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.hackerrank.com/chrisyeu11" target="_blank">Hackerrank</a></li>
-                <li><a href="" target="_blank">Blog</a></li>
-            </ul>
-        </div>
-
-        <div class="content" id="hobbies">
-            <h2>Hobbies and Interests</h2>
-            <p>Walking, Working out</p>
-        </div>
-
-        <div class="content" id="contact">
-            <h2>Contact</h2>
-            <p>Best way to contact me is via email. Chrisyeu11@gmail.com</p>
-        </div>
-
-        <div class="content" id="latest-projects">
-            <h2>Latest Projects</h2>
-            <p>Houston Environmental Justice Website. My Personal Website. Blogs.</p>
-        </div>
-
-        <div class="content" id="work-together">
-            <h2>Let's Work Together</h2>
-            <p>Lets start on projects together. Small, Big, Unrealistic, Realistic, Serious, or Silly, whatever you have in mind! Let me know! </p>
-        </div>
-
-        <div class="content" id="stay-connected">
-            <h2>Stay Connected</h2>
-            <p>Lets connect!</p>
+    <div class="main-content" id="content">
+        <div class="grid-container">
+            <div class="grid-item large">
+                <h2>On Africa’s farms, the forecast calls for adaptation and innovation</h2>
+                <p>In Kenya, I visited with a smallholder farmer using new tools and practices to fight back against climate change.</p>
+            </div>
+            <div class="grid-item medium">
+                <h3>The surprising key to a clean energy future</h3>
+                <p>If you care about climate change, you should care about transmission.</p>
+            </div>
+            <div class="grid-item medium">
+                <h3>Climate change, AI, and more from my latest AMA</h3>
+                <p>In this year’s Ask Me Anything, I answered a variety of questions from Redditors around the world.</p>
+            </div>
+            <div class="grid-item medium">
+                <h3>The future our grandchildren deserve</h3>
+                <p>Times are hard. But I still believe we can make the world better for the next generation. Here’s how.</p>
+            </div>
+            <div class="grid-item medium">
+                <h3>Grassroot Soccer scores a hat trick for African youth</h3>
+                <p>This organization uses the beautiful game to reach millions of young people with lifesaving services.</p>
+            </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

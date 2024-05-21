@@ -1,5 +1,5 @@
 function getInTouch() {
-    alert("Get in touch functionality is not implemented yet.");
+    window.location.href = "mailto:Chrisyeu11@gmail.com";
 }
 
 function toggleTheme() {
@@ -20,18 +20,40 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("theme-toggle").checked = true;
     }
 
-    document.querySelectorAll('.navbar ul li a').forEach(anchor => {
+    // Sidebar hover effect
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.addEventListener('mouseenter', function () {
+        sidebar.classList.remove('collapsed');
+    });
+    sidebar.addEventListener('mouseleave', function () {
+        sidebar.classList.add('collapsed');
+    });
+
+    // Load the initial page content
+    loadPage('home.html', false);
+
+    document.querySelectorAll('.sidebar nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            const offset = 60; // Height of the fixed navbar
-
-            window.scrollTo({
-                top: targetElement.offsetTop - offset,
-                behavior: 'smooth'
-            });
+            loadPage(this.getAttribute('href'));
         });
     });
+
+    window.addEventListener('popstate', function(event) {
+        if (event.state && event.state.path) {
+            loadPage(event.state.path, false);
+        }
+    });
 });
+
+function loadPage(url, addHistory = true) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('content').innerHTML = html;
+            if (addHistory) {
+                window.history.pushState({path: url}, '', url);
+            }
+        })
+        .catch(error => console.error('Error loading page:', error));
+}
