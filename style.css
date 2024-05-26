@@ -30,7 +30,7 @@ body.light-theme {
 }
 
 .sidebar.collapsed {
-    transform: translateX(-200px); /* Adjust based on your preference */
+    transform: translateX(-200px);
 }
 
 .sidebar .profile {
@@ -78,7 +78,7 @@ body.light-theme {
 }
 
 .main-content {
-    margin-left: 270px; /* Adjusted margin to prevent overlap */
+    margin-left: 270px;
     padding: 20px;
     width: calc(100% - 270px);
     box-sizing: border-box;
@@ -95,20 +95,15 @@ body.light-theme {
     background-color: #444;
     padding: 20px;
     border-radius: 10px;
-    color: white;
+    color: white; /* Ensure text color is white */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .grid-item.large {
     grid-column: span 12;
     background-image: url('images/large-image.jpg');
     background-size: cover;
-    color: black;
+    color: white; /* Ensure text color is white */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -119,22 +114,32 @@ body.light-theme {
 .grid-item.medium {
     grid-column: span 6;
     background-color: #333;
+    color: white; /* Ensure text color is white */
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2 {
     margin-bottom: 20px;
+    color: white; /* Ensure headings are white */
 }
 
 h3 {
     margin-bottom: 10px;
+    color: white; /* Ensure headings are white */
 }
 
 p {
     margin-bottom: 30px;
+    color: white; /* Ensure paragraphs are white */
 }
 
 ul {
     text-align: left;
+    color: white; /* Ensure list items are white */
 }
 
 ul li {

@@ -1,10 +1,42 @@
-<div class="content">
-    <h2>Links</h2>
-    <p>Include links to your social media profiles, personal blog, or any other relevant links.</p>
-    <ul>
-        <li><a href="https://github.com/chrisyeu11" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/chrisyeu11" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.hackerrank.com/chrisyeu11" target="_blank">Hackerrank</a></li>
-        <li><a href="" target="_blank">Blog</a></li>
-    </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links - Chris Yeu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="sidebar collapsed">
+        <div class="profile">
+            <img src="images/profile-picture.jpg" alt="Profile Picture" loading="lazy">
+            <h3>Chris Yeu</h3>
+            <p>Computer Science Student</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#" onclick="getInTouch()">Contact Me</a></li>
+            </ul>
+        </nav>
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="main-content" id="content">
+        <div class="content">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://github.com/chrisyeu11" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/chrisyeu11" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.hackerrank.com/chrisyeu11" target="_blank">Hackerrank</a></li>
+                <li><a href="" target="_blank">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

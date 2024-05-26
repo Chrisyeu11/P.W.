@@ -6,13 +6,11 @@
     <title>Chris Yeu</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-XXXXXX-X');
     </script>
 </head>
@@ -23,19 +21,19 @@
             <h3>Chris Yeu</h3>
             <p>Computer Science Student</p>
         </div>
-        <nav aria-label="Main Navigation">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="links.html">Links</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="#" onclick="getInTouch()">Contact Me</a></li>
             </ul>
         </nav>
         <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" onclick="toggleTheme()" />
+            <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
             <span class="slider round"></span>
         </label>
     </div>
-
     <div class="main-content" id="content">
         <div class="grid-container">
             <div class="grid-item large">
